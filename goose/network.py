@@ -28,7 +28,7 @@ class HtmlFetcher(object):
     def __init__(self, config):
         self.config = config
         # set header
-        self.headers = {'User-agent': self.config.browser_user_agent}
+        self.headers = {'User-agent': self.config.browser_user_agent, 'Cache-Control': 'no-cache,max-age=0', 'Pragma': 'no-cache'}
 
     def get_url(self):
         # if we have a result
